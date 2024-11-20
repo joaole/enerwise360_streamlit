@@ -50,8 +50,19 @@ def generate_projections(data):
     })
     return df
 
-# Cabeçalho
-st.title("EnerWise 360 - Painel Interativo de Gestão Sustentável")
+#logo e titulo
+col1, col2 = st.columns([1, 4])  # Ajustar a proporção das colunas
+
+with col1:
+    st.image("logo.png", use_container_width=True)  # Usar o parâmetro correto
+
+with col2:
+    st.markdown(
+        """
+        <h1 style="margin-top: 20px;">EnerWise 360 - Painel Interativo de Gestão Sustentável</h1>
+        """,
+        unsafe_allow_html=True
+    )
 st.markdown("### Monitoramento, Projeção e Benchmarking para Operações de Armazenagem")
 
 # Divisão de KPIs
